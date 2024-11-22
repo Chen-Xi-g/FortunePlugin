@@ -1,18 +1,25 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.chenxig.fortuneplugin</id>
+    <id>com.fortune.mvvm_plugin</id>
     <name>FortunePlugin</name>
-    <vendor>chen-xi-g</vendor>
+    <vendor>高国峰</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.chenxig.fortuneplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="other.template.CreateMVVMTemplateProviderImpl"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.chenxig.fortuneplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup displayType="BALLOON" id="Custom MVVM Output File Success"/>
+    </extensions>
+    
+    <actions>
+        <action class="other.action.RequestAnAction" id="RequestAnAction" text="Request An Action" description="一键创建请求函数" icon="AllIcons.General.Information">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>

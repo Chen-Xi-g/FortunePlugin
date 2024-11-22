@@ -1,36 +1,35 @@
-# FortunePlugin
+# 组件化开发插件
 
 ![Build](https://github.com/Chen-Xi-g/FortunePlugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## 功能说明
+
+- [x] 一键创建`Activity/Fragment`
+- [x] 一键创建`ListActivity/ListFragment`
+- [x] 一键创建`ViewModel`
+- [x] 一键创建`XML`布局
+- [x] 一键添加创建的`Activity`到`AndroidManifest`中
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+配合`AndroidLibrary`组件化工程, 快速创建Activity/Fragment/ViewModel, 减少重复操作, 加快开发流程.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+## 使用说明
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+1. 创建Activity: 在需要生成文件的目录点击右键, 选择 <kbd>New</kbd> > <kbd>Activity</kbd> > <kbd>Android MVVM Activity</kbd>
+2. 创建Fragment: 在需要生成文件的目录点击右键, 选择 <kbd>New</kbd> > <kbd>Fragment</kbd> > <kbd>Android MVVM Fragment</kbd>
+3. 创建ViewPager2: 在需要生成文件的目录点击右键, 选择 <kbd>New</kbd> > <kbd>Other</kbd> > <kbd>Android MVVM ViewPager2</kbd>
+
 <!-- Plugin description end -->
 
 ## Installation
 
-- Using the IDE built-in plugin system:
-  
+- ~~Using the IDE built-in plugin system:~~
+
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "FortunePlugin"</kbd> >
   <kbd>Install</kbd>
-  
+
 - Using JetBrains Marketplace:
 
   Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
@@ -45,6 +44,7 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 
 
 ---
+
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
